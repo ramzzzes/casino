@@ -104,8 +104,8 @@ const Offers = () => {
           item.discount.new_price <= price.high,
       );
 
-      sortBy({data: newFilteredOffers, sort: sort});
-      setFilteredOffers(newFilteredOffers);
+      
+      setFilteredOffers(sortBy({data: newFilteredOffers, sort: sort}));
     }, 100),
     [offers, price, sort],
   );
